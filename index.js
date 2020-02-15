@@ -1,38 +1,38 @@
 const { fetchMyIP, fetchCoordsByIP, fetchISSFlyOverTimes, nextISSTimesForMyLocation } = require('./iss');
 
-fetchMyIP((error, ip) => {
-  if (error) {
-    console.log("It didn't work!" , error);
-    return;
-  }
+// fetchMyIP((error, ip) => {
+//   if (error) {
+//     console.log("It didn't work!" , error);
+//     return;
+//   }
 
-  console.log('It worked! Returned IP:' , ip);
-});
+//   console.log('It worked! Returned IP:' , ip);
+// });
 
 /**
 https://ipvigilante.com/json/invalidiphere
 https://ipvigilante.com/162.245.144.188
  */
 
-fetchCoordsByIP('162.245.144.188', (error, data) => {
-  if (error) {
-    console.log("It didn't work!" , error);
-    return;
-  }
+// fetchCoordsByIP('162.245.144.188', (error, data) => {
+//   if (error) {
+//     console.log("It didn't work!" , error);
+//     return;
+//   }
 
-  console.log('It worked! Returned IP:' , data);
-});
+//   console.log('It worked! Returned IP:' , data);
+// });
 
-fetchISSFlyOverTimes({ latitude: '49.27670', longitude: '-123.13000' }, (error, data) => {
+// fetchISSFlyOverTimes({ latitude: '49.27670', longitude: '-123.13000' }, (error, data) => {
 
-  if (error) {
-    console.log("It didn't work!" , error);
-    return;
-  }
+//   if (error) {
+//     console.log("It didn't work!" , error);
+//     return;
+//   }
 
-  console.log('The fly over times as an array of objects (null if error). Example: ', data);
+//   console.log('The fly over times as an array of objects (null if error). Example: ', data);
 
-});
+// });
 
 /**
  * Orchestrates multiple API requests in order to determine the next 5 upcoming ISS fly overs for the user's current location.
